@@ -1,0 +1,25 @@
+.frente,
+.dorso {
+  transition: transform 1s ease-in-out, opacity 1s ease;
+}
+
+.dorso {
+  transform: rotateY(179deg);
+}
+
+.card-flip:hover .card .frente {
+  @apply opacity-0;
+}
+.card-flip:hover .card .dorso {
+  @apply opacity-100;
+}
+
+.card-flip:hover .card {
+  transform: rotateY(179deg);
+}
+
+.card {
+  perspective: 1000px;
+  transform: perspective(1000px) translateY(0);
+  transition: transform 0.8s ease-in-out;
+}

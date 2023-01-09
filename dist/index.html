@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elias Rodriguez - Web Developer</title>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 821px)"
+      href="responsive.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900">
+    <!-- Navbar Section -->
+    <nav
+      id="navbar"
+      class="hidden border border-gray-500 rounded-b-3xl border-solid bg-gray-900 sticky top-0 left-0 mb-4 z-50 py-4 md:flex justify-around"
+    >
+      <div class="left-nav">
+        <h2 class="text-white">Elias Rodriguez - Web Developer</h2>
+      </div>
+      <div class="right-nav">
+        <ul class="flex list-none">
+          <li class="my-0 mx-4">
+            <a
+              href="#home"
+              class="no-underline py-2 px-4 text-white roboto linknav"
+              >Home</a
+            >
+          </li>
+          <li class="my-0 mx-4">
+            <a
+              href="#about"
+              class="no-underline py-2 px-4 text-white roboto linknav"
+              >Sobre mi</a
+            >
+          </li>
+          <li class="my-0 mx-4">
+            <a
+              href="#skills"
+              class="no-underline py-2 px-4 text-white roboto linknav"
+              >Skills</a
+            >
+          </li>
+          <li class="my-0 mx-4">
+            <a
+              href="#projects"
+              class="no-underline py-2 px-4 text-white roboto linknav"
+              >Proyectos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Bottom Navigator -->
+    <section
+      id="bottom"
+      class="fixed w-full h-24 hidden justify-center items-center z-50 bottom-0"
+    >
+      <div
+        class="bottom-nav rounded-full bg-gray-800 z-50 h-16 py-0 px-8 flex justify-center items-center"
+      >
+        <ul class="flex justify-around items-center">
+          <a class="no-underline" href="#home">
+            <li
+              class="bottomo-hover flex justify-center items-center text-white w-12 h-12 cursor-pointer p-4 rounded-full linkbottomnav"
+            >
+              <i class="fa-solid fa-house"></i>
+            </li>
+          </a>
+          <a class="no-underline" href="#about">
+            <li
+              class="bottomo-hover flex justify-center items-center text-white w-12 h-12 cursor-pointer p-4 rounded-full linkbottomnav"
+            >
+              <i class="fa-solid fa-user"></i>
+            </li>
+          </a>
+          <a class="no-underline" href="#skills">
+            <li
+              class="bottomo-hover flex justify-center items-center text-white w-12 h-12 cursor-pointer p-4 rounded-full linkbottomnav"
+            >
+              <i class="fa-solid fa-code"></i>
+            </li>
+          </a>
+          <a class="no-underline" href="#projects">
+            <li
+              class="bottomo-hover flex justify-center items-center text-white w-12 h-12 cursor-pointer p-4 rounded-full linkbottomnav"
+            >
+              <i class="fa-solid fa-rocket"></i>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Home Section -->
+    <section
+      id="home"
+      class="flex flex-col justify-around items-center w-4/5 m-auto md:flex-row"
+    >
+      <!-- home -->
+      <div class="mt-10">
+        <h6 class="my-4 mx-0 ml-1 text-center text-lg text-slate-400 poppinss">
+          Hola, soy
+        </h6>
+        <h1 class="text-4xl text-center text-white">Elias Rodriguez Assaf</h1>
+        <h4 class="my-4 mx-0 ml-1 text-center text-lg text-slate-400 poppinss">
+          Fullstack Developer
+        </h4>
+      </div>
+      <!-- botones -->
+      <div class="mt-10">
+        <a
+          class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+          href="cv.pdf"
+          target="_blank"
+        >
+          Curriculum
+        </a>
+        <a
+          class="btn ml-5 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+          id="hireme"
+          href="https://www.linkedin.com/in/eliasod46"
+          target="_blank"
+          >linkedin</a
+        >
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1 class="text-center my-8 mx-0 text-white text-3xl">Sobre mi</h1>
+      <div class="about-container flex justify-around mt-10">
+        <div
+          class="mt-10 about-left relative w-2/3 flex justify-center items-center md:-mt-10"
+        >
+          <!-- Here in src replade the given link with your secondary image link -->
+          <img
+            src="./assets/foto.png"
+            class="w-full rounded-2xl"
+            alt=""
+            style="width: 50%"
+          />
+        </div>
+
+        <div class="pr-16 w-1/2 flex">
+          <div class="about-content">
+            <h1 class="text-white mb-4 poppins">Elias Rodriguez</h1>
+            <p class="text-white mb-8 poppins">
+              Soy un apasionado por la programación. Me considero un autodidacta
+              sin barreras para encontrar soluciones, soy una persona
+              cooperativa, con ganas de aprender y de mejorar, me gusta estar
+              siempre atento a lo nuevo que se viene. Por eso busco una empresa
+              que me ofrezca la oportunidad de seguir evolucionando en el mundo
+              del desarrollo web y emplazar lo que haga falta para la
+              consecución de objetivos.
+            </p>
+            <a
+              class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+              id="hireme"
+              href="#contact"
+              >Contacatame</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="mt-12" id="skills">
+      <h1 class="text-center my-8 mx-0 text-white text-3xl">Skills</h1>
+      <div
+        class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+      >
+        <!-- mongoDB -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div class="frente w-full h-full flex justify-center items-center">
+              <div><img src="./assets/skills/mongodb.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">mongoDb</div>
+            </div>
+          </div>
+        </div>
+        <!-- mysql -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/mysql.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">mySQL</div>
+            </div>
+          </div>
+        </div>
+        <!-- html -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div class="frente w-full h-full flex justify-center items-center">
+              <div><img src="./assets/skills/html.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">HTML</div>
+            </div>
+          </div>
+        </div>
+        <!-- css -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/css.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">CSS</div>
+            </div>
+          </div>
+        </div>
+        <!-- tailwind -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/tailwind.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">tailwind</div>
+            </div>
+          </div>
+        </div>
+        <!-- node -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/node.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">nodeJS</div>
+            </div>
+          </div>
+        </div>
+        <!-- react -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/react.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">reactJS</div>
+            </div>
+          </div>
+        </div>
+        <!-- php -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/php.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">php</div>
+            </div>
+          </div>
+        </div>
+        <!-- lravel -->
+        <div class="w-64 mx-auto card-flip">
+          <div
+            class="card shadow-md shadow-cyan-500 overflow-hidden border border-cyan-500 rounded-xl text-gray-900 bg-transparent w-48 h-72 my-0 mx-auto relative"
+          >
+            <div
+              class="p-6 frente w-full h-full flex justify-center items-center"
+            >
+              <div><img src="./assets/skills/laravel.png" alt="" /></div>
+            </div>
+            <div
+              class="dorso absolute top-0 right-0 opacity-0 w-full h-full flex justify-center items-center"
+            >
+              <div class="text-4xl font-bold text-cyan-500">laravel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h1 class="text-center my-8 mx-0 text-white text-3xl">Proyectos</h1>
+      <div class="m-auto flex justify-center items-center flex-wrap">
+        <div
+          class="overflow-hidden w-80 m-4 bg-transparent border border-cyan-500 rounded-3xl py-8 px-4 text-center flex flex-col justify-center items-center"
+        >
+          <div class="bottom-8 h-40 relative w-52">
+            <img
+              class="rounded-xl mt-8"
+              src="./assets/projects/worldcreative.png"
+              alt=""
+            />
+          </div>
+          <h1 class="text-xl mb-4 text-white poppins">World Creative</h1>
+          <p class="leading-5 text-base text-white poppins">
+            Pagina web estatica de un centro de apoyo escolar, creada por
+            motivos de practica
+          </p>
+          <div class="mt-8 buttons flex justify-around mb-5">
+            <a
+              href="https://github.com/eliasrod46/worldcreative"
+              target="_blanks"
+              class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+              >GitHub</a
+            >
+            <a
+              href="https://eliasrod46.github.io/worldcreative/"
+              target="_blanks"
+              class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+              >Live Link</a
+            >
+          </div>
+          <div class="w-full">
+            <span class="text-sm bg-orange-500 inline p-1 m-2 mt-3">HTML</span>
+            <span class="text-sm bg-blue-600 inline p-1 m-2 mt-3">CSS</span>
+            <span class="text-sm bg-yellow-500 inline p-1 m-2 mt-3">JS</span>
+          </div>
+        </div>
+        <div
+          class="overflow-hidden w-80 m-4 bg-transparent border border-cyan-500 rounded-3xl py-8 px-4 text-center flex flex-col justify-center items-center"
+        >
+          <div class="bottom-8 h-40 relative w-52">
+            <img
+              class="rounded-xl mt-8"
+              src="./assets/projects/portfolio.png"
+              alt=""
+            />
+          </div>
+          <h1 class="text-xl mb-4 text-white poppins">Mi porfolio personal</h1>
+          <p class="leading-5 text-base text-white poppins">
+            Pagina web donde estan resumidos mis proyectos, mi exprecia y mis
+            hailidades
+          </p>
+          <div class="mt-8 buttons flex justify-around mb-5">
+            <a
+              href="https://github.com/eliasrod46/portfolio"
+              target="_blanks"
+              class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+              >GitHub</a
+            >
+            <a
+              href="https://eliasrod46.github.io/portfolio/"
+              target="_blanks"
+              class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+              >Live Link</a
+            >
+          </div>
+          <div class="w-full">
+            <span class="text-sm bg-orange-500 inline p-1 m-2 mt-3">HTML</span>
+            <span class="text-sm bg-blue-600 inline p-1 m-2 mt-3">CSS</span>
+            <span class="text-sm bg-yellow-500 inline p-1 m-2 mt-3">JS</span>
+            <span class="text-sm bg-sky-500 inline p-1 m-2 mt-3">Tailwind</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="mb-4">
+      <h1 class="text-center my-8 mx-0 text-white text-3xl">Escribime</h1>
+      <div class="contact-container flex justify-around items-center">
+        <div
+          class="flex w-10/12 py-0 px-8 m-auto justify-center items-center"
+          id="contactForm"
+        >
+          <form
+            action="https://formsubmit.co/eliasrod46@gmail.com"
+            id="contactFrom"
+            class="flex flex-col justify-center items-center"
+          >
+            <div class="name w-full">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="poppins resize-none border-2 border-solid border-cyan-700 rounded-lg text-white my-2 mx-0 py-2 px-4 bg-transparent text-base w-full"
+                placeholder="Ingresa tu nombre"
+              />
+            </div>
+            <div class="email w-full">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="poppins resize-none border-2 border-solid border-cyan-700 rounded-lg text-white my-2 mx-0 py-2 px-4 bg-transparent text-base w-full"
+                placeholder="Ingresa tu email"
+                required
+              />
+            </div>
+            <div class="textarea">
+              <textarea
+                name="text"
+                id="textarea"
+                cols="30"
+                rows="10"
+                class="poppins resize-none border-2 border-solid border-cyan-700 rounded-lg text-white my-2 mx-0 py-2 px-4 bg-transparent text-base w-full"
+                placeholder="Dejanos tu mensaje"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="btn ml-1 border border-cyan-500 rounded-lg bg-transparent py-3 px-5 cursor-pointer text-base text-cyan-500 poppins hover:text-gray-900 hover:border-white hover:bg-white hover:font-bold"
+                id="submit"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-sky-400 p-8 py-4">
+      <ul class="flex justify-center w-4/5 mx-auto my-8 res">
+        <li class="list-none my-0 mx-4">
+          <a
+            href="#home"
+            class="transition-all delay-500 no-underline text-lg text-gray-900 poppinss hover:text-white"
+            >Home</a
+          >
+        </li>
+        <li class="list-none my-0 mx-4">
+          <a
+            href="#about"
+            class="transition-all delay-100 ease-in no-underline text-lg text-gray-900 poppinss hover:text-white"
+            >About</a
+          >
+        </li>
+        <li class="list-none my-0 mx-4">
+          <a
+            href="#skills"
+            class="transition-all delay-100 ease-in no-underline text-lg text-gray-900 poppinss hover:text-white"
+            >Skills</a
+          >
+        </li>
+        <li class="list-none my-0 mx-4">
+          <a
+            href="#projects"
+            class="transition-all delay-100 ease-in no-underline text-lg text-gray-900 poppinss hover:text-white"
+            >Projects</a
+          >
+        </li>
+        <li class="list-none my-0 mx-4">
+          <a
+            href="cv.pdf"
+            target="_blank"
+            class="transition-all delay-100 ease-in no-underline text-lg text-gray-900 poppinss hover:text-white"
+            >Curriculum Vitae</a
+          >
+        </li>
+      </ul>
+      <ul class="flex justify-center -delay-100 ease-in5 my-4 mx-auto">
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/eliasod46" target="_blank">
+          <li
+            class="transition-all delay-100 ease-in cursor-pointer rounded-lg text-white bg-slate-900 border border-slate-900 p-2 list-none my-0 mx-4 hover:bg-transparent"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </li>
+        </a>
+        <!-- github -->
+        <a href="https://github.com/eliasrod46" target="_blank">
+          <li
+            class="transition-all delay-100 ease-in cursor-pointer rounded-lg text-white bg-slate-900 border border-slate-900 p-2 list-none my-0 mx-4 hover:bg-transparent"
+          >
+            <i class="fa-brands fa-github"></i>
+          </li>
+        </a>
+        <!-- github -->
+        <a href="https://www.instagram.com/eliasrod46/" target="_blank">
+          <li
+            class="transition-all delay-100 ease-in cursor-pointer rounded-lg text-white bg-slate-900 border border-slate-900 p-2 list-none my-0 mx-4 hover:bg-transparent"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+        </a>
+      </ul>
+      <p class="text-center my-8 mx-0 text-base text-slate-900 poppins">
+        &copy; Derechos Reservados -
+        <span class="text-white poppins">Elías Rodríguez</span>
+      </p>
+    </footer>
+
+    <div
+      id="scroll-top"
+      class="w-9 h-9 p-2 fixed bottom-4 right-10 flex justify-center items-center text-base rounded-lg cursor-pointer border border-gray-900 text-gray-900 bg-cyan-500 z-50"
+      onclick="scrolltop()"
+    >
+      <span><i class="fa-solid fa-arrow-up"></i></span>
+    </div>
+
+    <div
+      class="w-24 h-24 p-2 fixed bottom-24 right-4 flex justify-center items-center text-base rounded-lg cursor-pointer z-50"
+    >
+      <a href="https://wa.me/2645851837" target="_blank">
+        <img src="./assets/whatsapp.png" alt="" />
+      </a>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
