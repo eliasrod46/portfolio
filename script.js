@@ -1,97 +1,59 @@
-// Portfolio Minimalista - JavaScript
+// Portfolio Hacker/Coding - JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-  initThemeToggle();
-  initLanguageToggle();
-  initMobileMenu();
-  initSmoothScrolling();
+  initMatrixBackground();
+  initTerminalNavigation();
+  initTypingAnimations();
   initSkillBars();
   initContactForm();
-  initAnimations();
+  initCursorEffect();
+  initThemeToggle();
+  initLanguageToggle();
+  initGlitchEffects();
 });
 
 // Sistema de traducción
 const translations = {
   en: {
-    "nav.about": "About",
-    "nav.skills": "Skills",
-    "nav.projects": "Projects",
-    "nav.contact": "Contact",
-    "hero.greeting": "Hello, I'm",
-    "hero.subtitle_line1": "Backend Developer",
-    "hero.subtitle_line2": "Problem Solver",
-    "hero.description":
-      "I create <span class='highlight'>robust and scalable solutions</span> that drive business growth. Specialized in backend development with solid frontend experience, I transform complex ideas into <span class='highlight'>efficient applications</span>.",
-    "hero.view_projects": "View Projects",
-    "hero.contact_me": "Contact Me",
-    "about.title": "About Me",
-    "about.subtitle":
-      "Get to know more about my journey and passion for development",
-    "about.description1":
-      "I'm a passionate web developer with a solid background in backend development. My main focus is creating robust, scalable, and efficient applications that solve real-world problems.",
-    "about.description2":
-      "Although my specialty is backend, I also have significant experience in frontend technologies, which allows me to understand the complete web development landscape and create more integrated solutions.",
-    "about.years_experience": "Years Experience",
-    "about.projects_completed": "Projects Completed",
-    "about.technologies": "Technologies",
-    "skills.title": "Skills",
-    "skills.subtitle": "Technologies and tools I work with",
-    "skills.backend": "Backend",
-    "skills.frontend": "Frontend",
-    "skills.tools": "Tools",
-    "projects.title": "Projects",
-    "projects.subtitle": "Some of my recent work",
-    "projects.ecommerce_desc":
-      "Complete RESTful API for e-commerce platform with JWT authentication, integrated payments and inventory management.",
-    "projects.analytics_desc":
-      "Real-time data analytics platform with interactive dashboard and automated reports.",
-    "projects.social_desc":
-      "Backend for social network with real-time chat, push notifications and friend system.",
-    "contact.title": "Contact",
-    "contact.subtitle": "Have a project in mind? Let's talk!",
-    "contact.send_message": "Send Message",
+    "terminal.title": "elias@hacker:~$",
+    "terminal.whoami": "Elías Rodríguez",
+    "terminal.subtitle": "Backend Developer & Code Hacker",
+    "terminal.about":
+      "Passionate backend developer with 3+ years of experience creating robust and scalable solutions. Specialized in Node.js, Python, and modern web technologies. I transform complex business logic into efficient code that drives real-world applications.",
+    "terminal.nav.projects": "projects/",
+    "terminal.nav.contact": "contact.sh",
+    "terminal.nav.about": "about.txt",
+    "terminal.projects.title": "cd projects/ && ls -la",
+    "terminal.contact.title": "./contact.sh",
+    "terminal.about.title": "cat about.txt",
+    "terminal.form.title": "Send Message",
+    "terminal.form.name": "Name:",
+    "terminal.form.email": "Email:",
+    "terminal.form.subject": "Subject:",
+    "terminal.form.message": "Message:",
+    "terminal.form.send": "Send",
   },
   es: {
-    "nav.about": "Sobre Mí",
-    "nav.skills": "Habilidades",
-    "nav.projects": "Proyectos",
-    "nav.contact": "Contacto",
-    "hero.greeting": "Hola, soy",
-    "hero.subtitle_line1": "Desarrollador Backend",
-    "hero.subtitle_line2": "Solucionador de Problemas",
-    "hero.description":
-      "Creo <span class='highlight'>soluciones robustas y escalables</span> que impulsan el crecimiento empresarial. Especializado en desarrollo backend con experiencia sólida en tecnologías frontend, transformo ideas complejas en <span class='highlight'>aplicaciones eficientes</span>.",
-    "hero.view_projects": "Ver Proyectos",
-    "hero.contact_me": "Contactarme",
-    "about.title": "Sobre Mí",
-    "about.subtitle":
-      "Conoce más sobre mi trayectoria y pasión por el desarrollo",
-    "about.description1":
-      "Soy un desarrollador web apasionado con una sólida formación en desarrollo backend. Mi enfoque principal está en crear aplicaciones robustas, escalables y eficientes que resuelvan problemas reales.",
-    "about.description2":
-      "Aunque mi especialidad es el backend, también tengo experiencia significativa en tecnologías frontend, lo que me permite entender el panorama completo del desarrollo web y crear soluciones más integradas.",
-    "about.years_experience": "Años de Experiencia",
-    "about.projects_completed": "Proyectos Completados",
-    "about.technologies": "Tecnologías",
-    "skills.title": "Habilidades",
-    "skills.subtitle": "Tecnologías y herramientas con las que trabajo",
-    "skills.backend": "Backend",
-    "skills.frontend": "Frontend",
-    "skills.tools": "Herramientas",
-    "projects.title": "Proyectos",
-    "projects.subtitle": "Algunos de mis trabajos recientes",
-    "projects.ecommerce_desc":
-      "API RESTful completa para plataforma de comercio electrónico con autenticación JWT, pagos integrados y gestión de inventario.",
-    "projects.analytics_desc":
-      "Plataforma de análisis de datos en tiempo real con dashboard interactivo y reportes automatizados.",
-    "projects.social_desc":
-      "Backend para red social con funcionalidades de chat en tiempo real, notificaciones push y sistema de amigos.",
-    "contact.title": "Contacto",
-    "contact.subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
-    "contact.send_message": "Enviar Mensaje",
+    "terminal.title": "elias@hacker:~$",
+    "terminal.whoami": "Elías Rodríguez",
+    "terminal.subtitle": "Desarrollador Backend & Hacker de Código",
+    "terminal.about":
+      "Desarrollador backend apasionado con más de 3 años de experiencia creando soluciones robustas y escalables. Especializado en Node.js, Python y tecnologías web modernas. Transformo lógica de negocio compleja en código eficiente que impulsa aplicaciones del mundo real.",
+    "terminal.nav.projects": "proyectos/",
+    "terminal.nav.contact": "contacto.sh",
+    "terminal.nav.about": "sobre_mi.txt",
+    "terminal.projects.title": "cd proyectos/ && ls -la",
+    "terminal.contact.title": "./contacto.sh",
+    "terminal.about.title": "cat sobre_mi.txt",
+    "terminal.form.title": "Enviar Mensaje",
+    "terminal.form.name": "Nombre:",
+    "terminal.form.email": "Email:",
+    "terminal.form.subject": "Asunto:",
+    "terminal.form.message": "Mensaje:",
+    "terminal.form.send": "Enviar",
   },
 };
 
-let currentLanguage = "en";
+let currentLanguage = "es";
 
 // Función para traducir texto
 function translateText() {
@@ -99,109 +61,127 @@ function translateText() {
   elements.forEach((element) => {
     const key = element.getAttribute("data-translate");
     if (translations[currentLanguage][key]) {
-      // Usar innerHTML para elementos que contienen HTML
-      if (key.includes("description")) {
-        element.innerHTML = translations[currentLanguage][key];
-      } else {
-        element.textContent = translations[currentLanguage][key];
-      }
+      element.textContent = translations[currentLanguage][key];
     }
   });
 }
 
-// Toggle de idioma
-function initLanguageToggle() {
-  const languageToggle = document.getElementById("languageToggle");
-  const langText = languageToggle.querySelector(".lang-text");
+// Matrix Background Effect
+function initMatrixBackground() {
+  const matrixBg = document.getElementById("matrixBg");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
 
-  // Cargar idioma guardado
-  const savedLanguage = localStorage.getItem("portfolio-language") || "en";
-  currentLanguage = savedLanguage;
-  langText.textContent = currentLanguage.toUpperCase();
-  translateText();
+  canvas.style.position = "fixed";
+  canvas.style.top = "0";
+  canvas.style.left = "0";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.style.zIndex = "-1";
+  canvas.style.opacity = "0.1";
 
-  languageToggle.addEventListener("click", function () {
-    currentLanguage = currentLanguage === "en" ? "es" : "en";
-    langText.textContent = currentLanguage.toUpperCase();
-    localStorage.setItem("portfolio-language", currentLanguage);
-    translateText();
-  });
+  matrixBg.appendChild(canvas);
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+  const matrixArray = matrix.split("");
+
+  const font_size = 10;
+  const columns = canvas.width / font_size;
+
+  const drops = [];
+  for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+  }
+
+  function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#0F0";
+    ctx.font = font_size + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+      ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+      if (drops[i] * font_size > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(drawMatrix, 35);
 }
 
-// Toggle de tema
-function initThemeToggle() {
-  const themeToggle = document.getElementById("themeToggle");
-  const body = document.body;
-
-  // Cargar tema guardado
-  const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
-  body.className = savedTheme === "dark" ? "dark-theme" : "light-theme";
-  updateThemeIcon(savedTheme);
-
-  themeToggle.addEventListener("click", function () {
-    const isDark = body.classList.contains("dark-theme");
-    body.className = isDark ? "light-theme" : "dark-theme";
-    const newTheme = isDark ? "light" : "dark";
-    localStorage.setItem("portfolio-theme", newTheme);
-    updateThemeIcon(newTheme);
-  });
-}
-
-function updateThemeIcon(theme) {
-  const themeToggle = document.getElementById("themeToggle");
-  const icon = themeToggle.querySelector("i");
-  icon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
-}
-
-// Menú móvil
-function initMobileMenu() {
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-  const nav = document.querySelector(".nav");
-
-  mobileMenuToggle.addEventListener("click", function () {
-    nav.classList.toggle("active");
-    this.classList.toggle("active");
-  });
-
-  // Cerrar menú al hacer clic en un enlace
+// Terminal Navigation
+function initTerminalNavigation() {
   const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      nav.classList.remove("active");
-      mobileMenuToggle.classList.remove("active");
-    });
-  });
-}
-
-// Scroll suave
-function initSmoothScrolling() {
-  const navLinks = document.querySelectorAll('a[href^="#"]');
+  const terminalSections = document.querySelectorAll(".terminal-section");
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
 
-      if (targetElement) {
-        const offsetTop = targetElement.offsetTop - 70;
-
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
+      if (targetSection) {
+        // Hide all sections
+        terminalSections.forEach((section) => {
+          section.classList.remove("active");
         });
+
+        // Show target section
+        targetSection.classList.add("active");
+
+        // Add typing effect to new section
+        addTypingEffect(targetSection);
       }
     });
   });
 }
 
-// Barras de habilidades animadas
+// Typing Animations
+function initTypingAnimations() {
+  const typingElements = document.querySelectorAll(".typing-text");
+
+  typingElements.forEach((element) => {
+    const text = element.getAttribute("data-text");
+    element.textContent = "";
+    element.style.borderRight = "2px solid var(--accent-green)";
+
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      } else {
+        setTimeout(() => {
+          element.style.borderRight = "none";
+        }, 1000);
+      }
+    };
+
+    setTimeout(typeWriter, 1000);
+  });
+}
+
+// Skill Bars Animation
 function initSkillBars() {
   const skillBars = document.querySelectorAll(".skill-progress");
 
   const observer = new IntersectionObserver(
-    function (entries) {
+    (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const skillBar = entry.target;
@@ -209,7 +189,7 @@ function initSkillBars() {
 
           setTimeout(() => {
             skillBar.style.width = width + "%";
-          }, 200);
+          }, 500);
 
           observer.unobserve(skillBar);
         }
@@ -223,7 +203,7 @@ function initSkillBars() {
   });
 }
 
-// Formulario de contacto
+// Contact Form
 function initContactForm() {
   const form = document.getElementById("contactForm");
 
@@ -239,15 +219,15 @@ function initContactForm() {
     };
 
     if (validateForm(data)) {
-      showNotification("Message sent successfully!", "success");
+      showTerminalNotification("Message sent successfully!", "success");
       form.reset();
     } else {
-      showNotification("Please fill in all fields correctly.", "error");
+      showTerminalNotification("Please fill in all fields correctly.", "error");
     }
   });
 }
 
-// Validación del formulario
+// Form Validation
 function validateForm(data) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -260,184 +240,195 @@ function validateForm(data) {
   );
 }
 
-// Mostrar notificaciones
-function showNotification(message, type = "info") {
-  const notification = document.createElement("div");
-  notification.className = `notification notification-${type}`;
+// Terminal Notifications
+function showTerminalNotification(message, type = "info") {
+  const terminalOutput = document.querySelector(".terminal-output");
+
+  const notificationLine = document.createElement("div");
+  notificationLine.className = "terminal-line";
 
   const colors = {
-    success: "#10b981",
-    error: "#ef4444",
-    info: "#3b82f6",
+    success: "#00ff00",
+    error: "#ff0044",
+    info: "#00aaff",
   };
 
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--bg-card);
-    border: 1px solid ${colors[type]};
-    border-radius: var(--border-radius);
-    padding: 12px 16px;
-    color: var(--text-primary);
-    font-weight: 500;
-    z-index: 10000;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: var(--shadow-lg);
-    max-width: 300px;
+  notificationLine.innerHTML = `
+    <span class="prompt">elias@hacker:~$</span>
+    <span class="command" style="color: ${colors[type]}">echo "${message}"</span>
   `;
 
-  notification.innerHTML = `
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="color: ${colors[type]};">●</span>
-      <span>${message}</span>
-    </div>
-  `;
+  terminalOutput.appendChild(notificationLine);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
 
-  document.body.appendChild(notification);
-
-  // Animar entrada
+  // Remove after 5 seconds
   setTimeout(() => {
-    notification.style.transform = "translateX(0)";
-  }, 100);
-
-  // Remover después de 4 segundos
-  setTimeout(() => {
-    notification.style.transform = "translateX(100%)";
-    setTimeout(() => {
-      if (document.body.contains(notification)) {
-        document.body.removeChild(notification);
-      }
-    }, 300);
-  }, 4000);
+    if (terminalOutput.contains(notificationLine)) {
+      terminalOutput.removeChild(notificationLine);
+    }
+  }, 5000);
 }
 
-// Animaciones al hacer scroll
-function initAnimations() {
-  const animatedElements = document.querySelectorAll(
-    ".section, .hero-content, .code-block"
-  );
+// Cursor Effect
+function initCursorEffect() {
+  const cursor = document.getElementById("cursor");
 
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+  document.addEventListener("mousemove", function (e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
 
-  animatedElements.forEach((el) => {
-    observer.observe(el);
+  document.addEventListener("mousedown", function () {
+    cursor.style.transform = "scale(0.8)";
+  });
+
+  document.addEventListener("mouseup", function () {
+    cursor.style.transform = "scale(1)";
   });
 }
 
-// Efectos de hover para proyectos
-function initProjectHoverEffects() {
-  const projectCards = document.querySelectorAll(".project-card");
+// Theme Toggle
+function initThemeToggle() {
+  const themeToggle = document.getElementById("themeToggle");
 
-  projectCards.forEach((card) => {
-    // Efecto de entrada del mouse
-    card.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-8px) scale(1.02)";
-      this.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.15)";
-      this.style.borderColor = "var(--accent-primary)";
+  themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("light-theme");
+    const isLight = document.body.classList.contains("light-theme");
 
-      // Animar iconos de tecnología
-      const techTags = this.querySelectorAll(".tech-tag");
-      techTags.forEach((tag, index) => {
-        setTimeout(() => {
-          tag.style.transform = "translateY(-2px)";
-        }, index * 50);
-      });
-
-      // Animar enlaces
-      const projectLinks = this.querySelectorAll(".project-link");
-      projectLinks.forEach((link, index) => {
-        setTimeout(() => {
-          link.style.transform = "translateY(-2px)";
-        }, index * 100);
-      });
-    });
-
-    // Efecto de salida del mouse
-    card.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0) scale(1)";
-      this.style.boxShadow = "var(--shadow-sm)";
-      this.style.borderColor = "var(--border-color)";
-
-      // Resetear animaciones
-      const techTags = this.querySelectorAll(".tech-tag");
-      techTags.forEach((tag) => {
-        tag.style.transform = "translateY(0)";
-      });
-
-      const projectLinks = this.querySelectorAll(".project-link");
-      projectLinks.forEach((link) => {
-        link.style.transform = "translateY(0)";
-      });
-    });
-
-    // Efecto de click para feedback visual
-    card.addEventListener("mousedown", function () {
-      this.style.transform = "translateY(-6px) scale(1.01)";
-    });
-
-    card.addEventListener("mouseup", function () {
-      this.style.transform = "translateY(-8px) scale(1.02)";
-    });
-  });
-}
-
-// Cambiar navbar al hacer scroll
-function initScrollNavbar() {
-  const header = document.querySelector(".header");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      header.style.background = "rgba(10, 10, 10, 0.95)";
-      header.style.backdropFilter = "blur(10px)";
+    if (isLight) {
+      document.documentElement.style.setProperty("--text-primary", "#1a1a1a");
+      document.documentElement.style.setProperty("--text-secondary", "#333333");
+      document.documentElement.style.setProperty("--bg-primary", "#ffffff");
+      document.documentElement.style.setProperty("--bg-secondary", "#f8f8f8");
+      document.documentElement.style.setProperty("--accent-green", "#00aa00");
     } else {
-      header.style.background = "var(--bg-primary)";
-      header.style.backdropFilter = "blur(10px)";
+      document.documentElement.style.setProperty("--text-primary", "#00ff00");
+      document.documentElement.style.setProperty("--text-secondary", "#00cc00");
+      document.documentElement.style.setProperty("--bg-primary", "#0a0a0a");
+      document.documentElement.style.setProperty("--bg-secondary", "#111111");
+      document.documentElement.style.setProperty("--accent-green", "#00ff00");
     }
   });
 }
 
-// Inicializar efectos adicionales
-document.addEventListener("DOMContentLoaded", function () {
-  initProjectHoverEffects();
-  initScrollNavbar();
-});
+// Language Toggle
+function initLanguageToggle() {
+  const languageToggle = document.getElementById("languageToggle");
+  const langText = languageToggle.querySelector(".lang-text");
 
-// Atajos de teclado
+  languageToggle.addEventListener("click", function () {
+    currentLanguage = currentLanguage === "en" ? "es" : "en";
+    langText.textContent = currentLanguage.toUpperCase();
+    translateText();
+  });
+
+  // Initialize with Spanish
+  translateText();
+}
+
+// Glitch Effects
+function initGlitchEffects() {
+  const glitchElements = document.querySelectorAll(".glitch-text");
+
+  glitchElements.forEach((element) => {
+    element.addEventListener("mouseenter", function () {
+      this.style.animation = "glitch 0.3s infinite";
+    });
+
+    element.addEventListener("mouseleave", function () {
+      this.style.animation = "glitch 2s infinite";
+    });
+  });
+}
+
+// Add Typing Effect to Section
+function addTypingEffect(section) {
+  const terminalLines = section.querySelectorAll(".terminal-line");
+
+  terminalLines.forEach((line, index) => {
+    line.style.opacity = "0";
+    line.style.transform = "translateX(-20px)";
+
+    setTimeout(() => {
+      line.style.transition = "all 0.5s ease";
+      line.style.opacity = "1";
+      line.style.transform = "translateX(0)";
+    }, index * 200);
+  });
+}
+
+// Terminal Commands
+function executeCommand(command) {
+  const terminalOutput = document.querySelector(".terminal-output");
+
+  const commandLine = document.createElement("div");
+  commandLine.className = "terminal-line";
+  commandLine.innerHTML = `
+    <span class="prompt">elias@hacker:~$</span>
+    <span class="command">${command}</span>
+  `;
+
+  terminalOutput.appendChild(commandLine);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+// Keyboard Shortcuts
 document.addEventListener("keydown", function (e) {
-  // Ctrl + T para cambiar tema
+  // Ctrl + T for theme toggle
   if (e.ctrlKey && e.key === "t") {
     e.preventDefault();
     document.getElementById("themeToggle").click();
   }
 
-  // Ctrl + L para cambiar idioma
+  // Ctrl + L for language toggle
   if (e.ctrlKey && e.key === "l") {
     e.preventDefault();
     document.getElementById("languageToggle").click();
   }
+
+  // Escape to go back to welcome
+  if (e.key === "Escape") {
+    const terminalSections = document.querySelectorAll(".terminal-section");
+    terminalSections.forEach((section) => {
+      section.classList.remove("active");
+    });
+    document.getElementById("welcome").classList.add("active");
+  }
 });
 
-// Manejo de errores
+// Project Hover Effects
+function initProjectHoverEffects() {
+  const projectCards = document.querySelectorAll(".project-card");
+
+  projectCards.forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-8px)";
+      this.style.boxShadow = "0 0 30px rgba(0, 255, 0, 0.5)";
+    });
+
+    card.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0)";
+      this.style.boxShadow = "none";
+    });
+  });
+}
+
+// Initialize project hover effects
+document.addEventListener("DOMContentLoaded", function () {
+  initProjectHoverEffects();
+});
+
+// Error Handling
 window.addEventListener("error", function (e) {
-  console.error("Error en el portfolio:", e.error);
+  console.error("Error en el portfolio hacker:", e.error);
 });
 
-// Exportar funciones para uso externo
+// Export functions for external use
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     translateText,
-    showNotification,
+    showTerminalNotification,
     validateForm,
+    executeCommand,
   };
 }

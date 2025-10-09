@@ -3,233 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elías Rodríguez - Developer</title>
+    <title>elias@hacker:~$</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="dark-theme">
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <div class="logo">
-            <span class="logo-text">Elias</span>
-          </div>
-          <nav class="nav">
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a href="#about" class="nav-link" data-translate="nav.about"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#skills" class="nav-link" data-translate="nav.skills"
-                  >Skills</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#projects"
-                  class="nav-link"
-                  data-translate="nav.projects"
-                  >Projects</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#contact" class="nav-link" data-translate="nav.contact"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
-          <div class="header-controls">
-            <button
-              class="theme-toggle"
-              id="themeToggle"
-              aria-label="Toggle theme"
-            >
-              <i class="fas fa-moon"></i>
-            </button>
-            <button
-              class="language-toggle"
-              id="languageToggle"
-              aria-label="Toggle language"
-            >
-              <span class="lang-text">EN</span>
-            </button>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
-              <span class="hamburger"></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+  <body>
+    <!-- Matrix Background -->
+    <div class="matrix-bg" id="matrixBg"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 class="hero-title">
-              <span class="greeting" data-translate="hero.greeting"
-                >Hello, I'm</span
-              >
-              <span class="name">Elías Rodríguez</span>
-            </h1>
-            <h2 class="hero-subtitle">
-              <span class="subtitle-line" data-translate="hero.subtitle_line1"
-                >Desarrollador Backend</span
-              >
-              <span class="subtitle-accent">&</span>
-              <span class="subtitle-line" data-translate="hero.subtitle_line2"
-                >Solucionador de Problemas</span
-              >
-            </h2>
-            <p class="hero-description" data-translate="hero.description">
-              Creo
-              <span class="highlight">soluciones robustas y escalables</span>
-              que impulsan el crecimiento empresarial. Especializado en
-              desarrollo backend con experiencia sólida en tecnologías frontend,
-              transformo ideas complejas en
-              <span class="highlight">aplicaciones eficientes</span>.
-            </p>
-            <div class="hero-buttons">
-              <a
-                href="#projects"
-                class="btn btn-primary"
-                data-translate="hero.view_projects"
-              >
-                View Projects
-              </a>
-              <a
-                href="#contact"
-                class="btn btn-secondary"
-                data-translate="hero.contact_me"
-              >
-                Contact Me
-              </a>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="code-block">
-              <div class="code-header">
-                <div class="code-dots">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
-                <span class="code-title">about.js</span>
-              </div>
-              <div class="code-content">
-                <div class="code-line">
-                  <span class="keyword">const</span>
-                  <span class="variable">developer</span>
-                  <span class="operator">=</span>
-                  <span class="string">"Elías"</span>
-                </div>
-                <div class="code-line">
-                  <span class="keyword">const</span>
-                  <span class="variable">passion</span>
-                  <span class="operator">=</span>
-                  <span class="string">"Building amazing apps"</span>
-                </div>
-                <div class="code-line">
-                  <span class="keyword">const</span>
-                  <span class="variable">stack</span>
-                  <span class="operator">=</span>
-                  <span class="punctuation">[</span>
-                  <span class="string">"Node.js"</span>
-                  <span class="punctuation">,</span>
-                  <span class="string">"Python"</span>
-                  <span class="punctuation">,</span>
-                  <span class="string">"React"</span>
-                  <span class="punctuation">]</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Terminal Header -->
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <span class="btn close"></span>
+        <span class="btn minimize"></span>
+        <span class="btn maximize"></span>
       </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-translate="about.title">About Me</h2>
-          <p class="section-subtitle" data-translate="about.subtitle">
-            Get to know more about my journey and passion for development
-          </p>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
-            <p data-translate="about.description1">
-              I'm a passionate web developer with a solid background in backend
-              development. My main focus is creating robust, scalable, and
-              efficient applications that solve real-world problems.
-            </p>
-            <p data-translate="about.description2">
-              Although my specialty is backend, I also have significant
-              experience in frontend technologies, which allows me to understand
-              the complete web development landscape and create more integrated
-              solutions.
-            </p>
-            <div class="stats">
-              <div class="stat">
-                <div class="stat-number">3+</div>
-                <div class="stat-label" data-translate="about.years_experience">
-                  Years Experience
-                </div>
-              </div>
-              <div class="stat">
-                <div class="stat-number">20+</div>
-                <div
-                  class="stat-label"
-                  data-translate="about.projects_completed"
-                >
-                  Projects Completed
-                </div>
-              </div>
-              <div class="stat">
-                <div class="stat-number">10+</div>
-                <div class="stat-label" data-translate="about.technologies">
-                  Technologies
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-image">
-            <div class="image-placeholder">
-              <i class="fas fa-user"></i>
-            </div>
-          </div>
-        </div>
+      <div class="terminal-title">elias@hacker:~$</div>
+      <div class="terminal-controls">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-adjust"></i>
+        </button>
+        <button class="language-toggle" id="languageToggle">
+          <span class="lang-text">EN</span>
+        </button>
       </div>
-    </section>
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-translate="skills.title">Skills</h2>
-          <p class="section-subtitle" data-translate="skills.subtitle">
-            Technologies and tools I work with
-          </p>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3 class="skill-category-title">
-              <i class="fas fa-server"></i>
-              <span data-translate="skills.backend">Backend</span>
-            </h3>
-            <div class="skill-list">
+    <!-- Main Terminal -->
+    <div class="terminal-container">
+      <!-- Welcome Screen -->
+      <section id="welcome" class="terminal-section active">
+        <div class="terminal-output">
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">whoami</span>
+          </div>
+          <div class="terminal-response">
+            <div class="glitch-text" data-text="Elías Rodríguez">
+              Elías Rodríguez
+            </div>
+            <div class="subtitle">Backend Developer & Code Hacker</div>
+          </div>
+
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">cat about.txt</span>
+          </div>
+          <div class="terminal-response">
+            <div
+              class="typing-text"
+              data-text="Passionate backend developer with 3+ years of experience creating robust and scalable solutions. Specialized in Node.js, Python, and modern web technologies. I transform complex business logic into efficient code that drives real-world applications."
+            ></div>
+          </div>
+
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">ls -la skills/</span>
+          </div>
+          <div class="terminal-response">
+            <div class="skills-grid">
               <div class="skill-item">
                 <span class="skill-name">Node.js</span>
                 <div class="skill-bar">
@@ -243,9 +82,9 @@
                 </div>
               </div>
               <div class="skill-item">
-                <span class="skill-name">Express.js</span>
+                <span class="skill-name">React</span>
                 <div class="skill-bar">
-                  <div class="skill-progress" data-width="88"></div>
+                  <div class="skill-progress" data-width="75"></div>
                 </div>
               </div>
               <div class="skill-item">
@@ -257,287 +96,267 @@
             </div>
           </div>
 
-          <div class="skill-category">
-            <h3 class="skill-category-title">
-              <i class="fas fa-laptop-code"></i>
-              <span data-translate="skills.frontend">Frontend</span>
-            </h3>
-            <div class="skill-list">
-              <div class="skill-item">
-                <span class="skill-name">React</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="75"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">JavaScript</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="85"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">HTML5</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="90"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">CSS3</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="88"></div>
-                </div>
-              </div>
-            </div>
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">./navigate.sh</span>
           </div>
-
-          <div class="skill-category">
-            <h3 class="skill-category-title">
-              <i class="fas fa-tools"></i>
-              <span data-translate="skills.tools">Tools</span>
-            </h3>
-            <div class="skill-list">
-              <div class="skill-item">
-                <span class="skill-name">Git</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="85"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Docker</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="75"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">AWS</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="70"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Linux</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="80"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-translate="projects.title">
-            Projects
-          </h2>
-          <p class="section-subtitle" data-translate="projects.subtitle">
-            Some of my recent work
-          </p>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">E-commerce API</h3>
-              <p
-                class="project-description"
-                data-translate="projects.ecommerce_desc"
-              >
-                Complete RESTful API for e-commerce platform with JWT
-                authentication, integrated payments and inventory management.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">JWT</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link">
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-                <a href="#" class="project-link">
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Demo</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Analytics System</h3>
-              <p
-                class="project-description"
-                data-translate="projects.analytics_desc"
-              >
-                Real-time data analytics platform with interactive dashboard and
-                automated reports.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Django</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Redis</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link">
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-                <a href="#" class="project-link">
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Demo</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Social Network API</h3>
-              <p
-                class="project-description"
-                data-translate="projects.social_desc"
-              >
-                Backend for social network with real-time chat, push
-                notifications and friend system.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Socket.io</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">Redis</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link">
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-                <a href="#" class="project-link">
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Demo</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-translate="contact.title">Contact</h2>
-          <p class="section-subtitle" data-translate="contact.subtitle">
-            Have a project in mind? Let's talk!
-          </p>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p>elias@example.com</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Location</h4>
-                <p>City, Country</p>
-              </div>
-            </div>
-            <div class="social-links">
-              <a href="#" class="social-link">
-                <i class="fab fa-github"></i>
+          <div class="terminal-response">
+            <div class="nav-menu">
+              <a href="#projects" class="nav-link">
+                <span class="nav-icon">📁</span>
+                <span class="nav-text">projects/</span>
               </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-linkedin"></i>
+              <a href="#contact" class="nav-link">
+                <span class="nav-icon">📧</span>
+                <span class="nav-text">contact.sh</span>
               </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-twitter"></i>
+              <a href="#about" class="nav-link">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">about.txt</span>
               </a>
             </div>
           </div>
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="terminal-section">
+        <div class="terminal-output">
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">cd projects/ && ls -la</span>
+          </div>
+          <div class="terminal-response">
+            <div class="projects-container">
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">🛒</span>
+                  <span class="project-name">ecommerce-api/</span>
+                  <span class="project-status">ACTIVE</span>
+                </div>
+                <div class="project-content">
+                  <div class="project-description">
+                    Complete RESTful API for e-commerce platform with JWT
+                    authentication, integrated payments and inventory
+                    management.
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">JWT</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link">
+                      <i class="fab fa-github"></i>
+                      <span>Source</span>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Demo</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                />
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">📊</span>
+                  <span class="project-name">analytics-system/</span>
+                  <span class="project-status">ACTIVE</span>
+                </div>
+                <div class="project-content">
+                  <div class="project-description">
+                    Real-time data analytics platform with interactive dashboard
+                    and automated reports.
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Redis</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link">
+                      <i class="fab fa-github"></i>
+                      <span>Source</span>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Demo</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                />
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">👥</span>
+                  <span class="project-name">social-network/</span>
+                  <span class="project-status">ACTIVE</span>
+                </div>
+                <div class="project-content">
+                  <div class="project-description">
+                    Backend for social network with real-time chat, push
+                    notifications and friend system.
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Socket.io</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Redis</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link">
+                      <i class="fab fa-github"></i>
+                      <span>Source</span>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Demo</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Your message"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-paper-plane"></i>
-                <span data-translate="contact.send_message">Send Message</span>
-              </button>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <p>&copy; 2024 Elías Rodríguez. All rights reserved.</p>
-          <p>Made with ❤️ and lots of coffee</p>
+      <!-- Contact Section -->
+      <section id="contact" class="terminal-section">
+        <div class="terminal-output">
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">./contact.sh</span>
+          </div>
+          <div class="terminal-response">
+            <div class="contact-container">
+              <div class="contact-info">
+                <div class="contact-item">
+                  <span class="contact-icon">📧</span>
+                  <span class="contact-label">Email:</span>
+                  <span class="contact-value">elias@example.com</span>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📱</span>
+                  <span class="contact-label">Phone:</span>
+                  <span class="contact-value">+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <span class="contact-label">Location:</span>
+                  <span class="contact-value">City, Country</span>
+                </div>
+                <div class="social-links">
+                  <a href="#" class="social-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-form">
+                <div class="form-header">
+                  <span class="form-title">Send Message</span>
+                </div>
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label class="form-label">Name:</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Subject:</label>
+                    <input
+                      type="text"
+                      name="subject"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Message:</label>
+                    <textarea
+                      name="message"
+                      class="form-textarea"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Send</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="terminal-section">
+        <div class="terminal-output">
+          <div class="terminal-line">
+            <span class="prompt">elias@hacker:~$</span>
+            <span class="command">cat about.txt</span>
+          </div>
+          <div class="terminal-response">
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  I'm a passionate backend developer with a solid background in
+                  creating robust, scalable applications. My main focus is on
+                  building efficient systems that solve real-world problems.
+                </p>
+                <p>
+                  Although my specialty is backend development, I also have
+                  significant experience in frontend technologies, which allows
+                  me to understand the complete web development landscape and
+                  create more integrated solutions.
+                </p>
+              </div>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number">3+</div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">20+</div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">10+</div>
+                  <div class="stat-label">Technologies</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
 
     <script src="script.js"></script>
   </body>
