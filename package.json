@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-elias-rodriguez",
+  "version": "1.0.0",
+  "description": "Portfolio web profesional para desarrollador backend especializado",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Ready for deployment to any static hosting service'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "backend",
+    "frontend",
+    "javascript",
+    "html",
+    "css",
+    "responsive"
+  ],
+  "author": "Elías Rodríguez",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliasrod46/portfolio"
+  },
+  "homepage": "https://eliasrod46.github.io/portfolio",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+

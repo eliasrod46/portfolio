@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elías Rodríguez - Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <span class="logo-text">Elias</span>
+          </div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#about" class="nav-link" data-translate="nav.about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link" data-translate="nav.skills"
+                  >Skills</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#projects"
+                  class="nav-link"
+                  data-translate="nav.projects"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link" data-translate="nav.contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="header-controls">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <button
+              class="language-toggle"
+              id="languageToggle"
+              aria-label="Toggle language"
+            >
+              <span class="lang-text">EN</span>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+              <span class="hamburger"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="greeting" data-translate="hero.greeting"
+                >Hello, I'm</span
+              >
+              <span class="name">Elías Rodríguez</span>
+            </h1>
+            <h2 class="hero-subtitle">
+              <span class="subtitle-line" data-translate="hero.subtitle_line1"
+                >Desarrollador Backend</span
+              >
+              <span class="subtitle-accent">&</span>
+              <span class="subtitle-line" data-translate="hero.subtitle_line2"
+                >Solucionador de Problemas</span
+              >
+            </h2>
+            <p class="hero-description" data-translate="hero.description">
+              Creo
+              <span class="highlight">soluciones robustas y escalables</span>
+              que impulsan el crecimiento empresarial. Especializado en
+              desarrollo backend con experiencia sólida en tecnologías frontend,
+              transformo ideas complejas en
+              <span class="highlight">aplicaciones eficientes</span>.
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="#projects"
+                class="btn btn-primary"
+                data-translate="hero.view_projects"
+              >
+                View Projects
+              </a>
+              <a
+                href="#contact"
+                class="btn btn-secondary"
+                data-translate="hero.contact_me"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="code-block">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="code-title">about.js</span>
+              </div>
+              <div class="code-content">
+                <div class="code-line">
+                  <span class="keyword">const</span>
+                  <span class="variable">developer</span>
+                  <span class="operator">=</span>
+                  <span class="string">"Elías"</span>
+                </div>
+                <div class="code-line">
+                  <span class="keyword">const</span>
+                  <span class="variable">passion</span>
+                  <span class="operator">=</span>
+                  <span class="string">"Building amazing apps"</span>
+                </div>
+                <div class="code-line">
+                  <span class="keyword">const</span>
+                  <span class="variable">stack</span>
+                  <span class="operator">=</span>
+                  <span class="punctuation">[</span>
+                  <span class="string">"Node.js"</span>
+                  <span class="punctuation">,</span>
+                  <span class="string">"Python"</span>
+                  <span class="punctuation">,</span>
+                  <span class="string">"React"</span>
+                  <span class="punctuation">]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="about.title">About Me</h2>
+          <p class="section-subtitle" data-translate="about.subtitle">
+            Get to know more about my journey and passion for development
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p data-translate="about.description1">
+              I'm a passionate web developer with a solid background in backend
+              development. My main focus is creating robust, scalable, and
+              efficient applications that solve real-world problems.
+            </p>
+            <p data-translate="about.description2">
+              Although my specialty is backend, I also have significant
+              experience in frontend technologies, which allows me to understand
+              the complete web development landscape and create more integrated
+              solutions.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-number">3+</div>
+                <div class="stat-label" data-translate="about.years_experience">
+                  Years Experience
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">20+</div>
+                <div
+                  class="stat-label"
+                  data-translate="about.projects_completed"
+                >
+                  Projects Completed
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">10+</div>
+                <div class="stat-label" data-translate="about.technologies">
+                  Technologies
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="image-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="skills.title">Skills</h2>
+          <p class="section-subtitle" data-translate="skills.subtitle">
+            Technologies and tools I work with
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <i class="fas fa-server"></i>
+              <span data-translate="skills.backend">Backend</span>
+            </h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-name">Node.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Express.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">PostgreSQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <i class="fas fa-laptop-code"></i>
+              <span data-translate="skills.frontend">Frontend</span>
+            </h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-name">React</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">HTML5</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">CSS3</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="88"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <i class="fas fa-tools"></i>
+              <span data-translate="skills.tools">Tools</span>
+            </h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-name">Git</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Docker</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">AWS</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Linux</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="projects.title">
+            Projects
+          </h2>
+          <p class="section-subtitle" data-translate="projects.subtitle">
+            Some of my recent work
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-commerce API</h3>
+              <p
+                class="project-description"
+                data-translate="projects.ecommerce_desc"
+              >
+                Complete RESTful API for e-commerce platform with JWT
+                authentication, integrated payments and inventory management.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JWT</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Demo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Analytics System</h3>
+              <p
+                class="project-description"
+                data-translate="projects.analytics_desc"
+              >
+                Real-time data analytics platform with interactive dashboard and
+                automated reports.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Demo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Social Network API</h3>
+              <p
+                class="project-description"
+                data-translate="projects.social_desc"
+              >
+                Backend for social network with real-time chat, push
+                notifications and friend system.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Socket.io</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Demo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="contact.title">Contact</h2>
+          <p class="section-subtitle" data-translate="contact.subtitle">
+            Have a project in mind? Let's talk!
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>elias@example.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>City, Country</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                <span data-translate="contact.send_message">Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2024 Elías Rodríguez. All rights reserved.</p>
+          <p>Made with ❤️ and lots of coffee</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
