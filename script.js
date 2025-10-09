@@ -1,55 +1,95 @@
-// Portfolio Hacker/Coding - JavaScript
+// Portfolio Elegant Cyberpunk - JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-  initMatrixBackground();
-  initTerminalNavigation();
-  initTypingAnimations();
-  initSkillBars();
-  initContactForm();
-  initCursorEffect();
   initThemeToggle();
   initLanguageToggle();
-  initGlitchEffects();
+  initMobileMenu();
+  initSmoothScrolling();
+  initSkillBars();
+  initContactForm();
+  initAnimations();
+  initParticleEffect();
+  initTypingEffect();
 });
 
 // Sistema de traducción
 const translations = {
   en: {
-    "terminal.title": "elias@hacker:~$",
-    "terminal.whoami": "Elías Rodríguez",
-    "terminal.subtitle": "Backend Developer & Code Hacker",
-    "terminal.about":
-      "Passionate backend developer with 3+ years of experience creating robust and scalable solutions. Specialized in Node.js, Python, and modern web technologies. I transform complex business logic into efficient code that drives real-world applications.",
-    "terminal.nav.projects": "projects/",
-    "terminal.nav.contact": "contact.sh",
-    "terminal.nav.about": "about.txt",
-    "terminal.projects.title": "cd projects/ && ls -la",
-    "terminal.contact.title": "./contact.sh",
-    "terminal.about.title": "cat about.txt",
-    "terminal.form.title": "Send Message",
-    "terminal.form.name": "Name:",
-    "terminal.form.email": "Email:",
-    "terminal.form.subject": "Subject:",
-    "terminal.form.message": "Message:",
-    "terminal.form.send": "Send",
+    "nav.about": "About",
+    "nav.skills": "Skills",
+    "nav.projects": "Projects",
+    "nav.contact": "Contact",
+    "hero.badge": "Available for work",
+    "hero.greeting": "Hello, I'm",
+    "hero.subtitle": "Backend Developer & Problem Solver",
+    "hero.description":
+      "I create <span class='highlight'>robust and scalable solutions</span> that drive business growth. Specialized in backend development with solid frontend experience, I transform complex ideas into <span class='highlight'>efficient applications</span>.",
+    "hero.view_projects": "View Projects",
+    "hero.contact_me": "Contact Me",
+    "about.title": "About Me",
+    "about.subtitle":
+      "Get to know more about my journey and passion for development",
+    "about.description1":
+      "I'm a passionate backend developer with a solid background in creating robust, scalable applications. My main focus is on building efficient systems that solve real-world problems.",
+    "about.description2":
+      "Although my specialty is backend development, I also have significant experience in frontend technologies, which allows me to understand the complete web development landscape and create more integrated solutions.",
+    "about.years_experience": "Years Experience",
+    "about.projects_completed": "Projects Completed",
+    "about.technologies": "Technologies",
+    "skills.title": "Skills",
+    "skills.subtitle": "Technologies and tools I work with",
+    "skills.backend": "Backend",
+    "skills.frontend": "Frontend",
+    "skills.tools": "Tools",
+    "projects.title": "Projects",
+    "projects.subtitle": "Some of my recent work",
+    "projects.ecommerce_desc":
+      "Complete RESTful API for e-commerce platform with JWT authentication, integrated payments and inventory management.",
+    "projects.analytics_desc":
+      "Real-time data analytics platform with interactive dashboard and automated reports.",
+    "projects.social_desc":
+      "Backend for social network with real-time chat, push notifications and friend system.",
+    "contact.title": "Contact",
+    "contact.subtitle": "Have a project in mind? Let's talk!",
+    "contact.send_message": "Send Message",
   },
   es: {
-    "terminal.title": "elias@hacker:~$",
-    "terminal.whoami": "Elías Rodríguez",
-    "terminal.subtitle": "Desarrollador Backend & Hacker de Código",
-    "terminal.about":
-      "Desarrollador backend apasionado con más de 3 años de experiencia creando soluciones robustas y escalables. Especializado en Node.js, Python y tecnologías web modernas. Transformo lógica de negocio compleja en código eficiente que impulsa aplicaciones del mundo real.",
-    "terminal.nav.projects": "proyectos/",
-    "terminal.nav.contact": "contacto.sh",
-    "terminal.nav.about": "sobre_mi.txt",
-    "terminal.projects.title": "cd proyectos/ && ls -la",
-    "terminal.contact.title": "./contacto.sh",
-    "terminal.about.title": "cat sobre_mi.txt",
-    "terminal.form.title": "Enviar Mensaje",
-    "terminal.form.name": "Nombre:",
-    "terminal.form.email": "Email:",
-    "terminal.form.subject": "Asunto:",
-    "terminal.form.message": "Mensaje:",
-    "terminal.form.send": "Enviar",
+    "nav.about": "Sobre Mí",
+    "nav.skills": "Habilidades",
+    "nav.projects": "Proyectos",
+    "nav.contact": "Contacto",
+    "hero.badge": "Disponible para trabajar",
+    "hero.greeting": "Hola, soy",
+    "hero.subtitle": "Desarrollador Backend & Solucionador de Problemas",
+    "hero.description":
+      "Creo <span class='highlight'>soluciones robustas y escalables</span> que impulsan el crecimiento empresarial. Especializado en desarrollo backend con experiencia sólida en frontend, transformo ideas complejas en <span class='highlight'>aplicaciones eficientes</span>.",
+    "hero.view_projects": "Ver Proyectos",
+    "hero.contact_me": "Contactarme",
+    "about.title": "Sobre Mí",
+    "about.subtitle":
+      "Conoce más sobre mi trayectoria y pasión por el desarrollo",
+    "about.description1":
+      "Soy un desarrollador backend apasionado con una sólida formación en crear aplicaciones robustas y escalables. Mi enfoque principal está en construir sistemas eficientes que resuelvan problemas reales.",
+    "about.description2":
+      "Aunque mi especialidad es el desarrollo backend, también tengo experiencia significativa en tecnologías frontend, lo que me permite entender el panorama completo del desarrollo web y crear soluciones más integradas.",
+    "about.years_experience": "Años de Experiencia",
+    "about.projects_completed": "Proyectos Completados",
+    "about.technologies": "Tecnologías",
+    "skills.title": "Habilidades",
+    "skills.subtitle": "Tecnologías y herramientas con las que trabajo",
+    "skills.backend": "Backend",
+    "skills.frontend": "Frontend",
+    "skills.tools": "Herramientas",
+    "projects.title": "Proyectos",
+    "projects.subtitle": "Algunos de mis trabajos recientes",
+    "projects.ecommerce_desc":
+      "API RESTful completa para plataforma de comercio electrónico con autenticación JWT, pagos integrados y gestión de inventario.",
+    "projects.analytics_desc":
+      "Plataforma de análisis de datos en tiempo real con dashboard interactivo y reportes automatizados.",
+    "projects.social_desc":
+      "Backend para red social con funcionalidades de chat en tiempo real, notificaciones push y sistema de amigos.",
+    "contact.title": "Contacto",
+    "contact.subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
+    "contact.send_message": "Enviar Mensaje",
   },
 };
 
@@ -61,122 +101,104 @@ function translateText() {
   elements.forEach((element) => {
     const key = element.getAttribute("data-translate");
     if (translations[currentLanguage][key]) {
-      element.textContent = translations[currentLanguage][key];
+      // Usar innerHTML para elementos que contienen HTML
+      if (key.includes("description")) {
+        element.innerHTML = translations[currentLanguage][key];
+      } else {
+        element.textContent = translations[currentLanguage][key];
+      }
     }
   });
 }
 
-// Matrix Background Effect
-function initMatrixBackground() {
-  const matrixBg = document.getElementById("matrixBg");
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
+// Toggle de tema
+function initThemeToggle() {
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
 
-  canvas.style.position = "fixed";
-  canvas.style.top = "0";
-  canvas.style.left = "0";
-  canvas.style.width = "100%";
-  canvas.style.height = "100%";
-  canvas.style.zIndex = "-1";
-  canvas.style.opacity = "0.1";
+  // Cargar tema guardado
+  const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+  body.className = savedTheme === "dark" ? "" : "light-theme";
+  updateThemeIcon(savedTheme);
 
-  matrixBg.appendChild(canvas);
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  resizeCanvas();
-  window.addEventListener("resize", resizeCanvas);
-
-  const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
-  const matrixArray = matrix.split("");
-
-  const font_size = 10;
-  const columns = canvas.width / font_size;
-
-  const drops = [];
-  for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
-  }
-
-  function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#0F0";
-    ctx.font = font_size + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
-      ctx.fillText(text, i * font_size, drops[i] * font_size);
-
-      if (drops[i] * font_size > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
-    }
-  }
-
-  setInterval(drawMatrix, 35);
+  themeToggle.addEventListener("click", function () {
+    const isDark = !body.classList.contains("light-theme");
+    body.className = isDark ? "light-theme" : "";
+    const newTheme = isDark ? "light" : "dark";
+    localStorage.setItem("portfolio-theme", newTheme);
+    updateThemeIcon(newTheme);
+  });
 }
 
-// Terminal Navigation
-function initTerminalNavigation() {
+function updateThemeIcon(theme) {
+  const themeToggle = document.getElementById("themeToggle");
+  const icon = themeToggle.querySelector("i");
+  icon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
+}
+
+// Toggle de idioma
+function initLanguageToggle() {
+  const languageToggle = document.getElementById("languageToggle");
+  const langText = languageToggle.querySelector(".lang-text");
+
+  // Cargar idioma guardado
+  const savedLanguage = localStorage.getItem("portfolio-language") || "es";
+  currentLanguage = savedLanguage;
+  langText.textContent = currentLanguage.toUpperCase();
+  translateText();
+
+  languageToggle.addEventListener("click", function () {
+    currentLanguage = currentLanguage === "en" ? "es" : "en";
+    langText.textContent = currentLanguage.toUpperCase();
+    localStorage.setItem("portfolio-language", currentLanguage);
+    translateText();
+  });
+}
+
+// Menú móvil
+function initMobileMenu() {
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const nav = document.querySelector(".nav");
+
+  mobileMenuToggle.addEventListener("click", function () {
+    nav.classList.toggle("active");
+    this.classList.toggle("active");
+  });
+
+  // Cerrar menú al hacer clic en un enlace
   const navLinks = document.querySelectorAll(".nav-link");
-  const terminalSections = document.querySelectorAll(".terminal-section");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      nav.classList.remove("active");
+      mobileMenuToggle.classList.remove("active");
+    });
+  });
+}
+
+// Scroll suave
+function initSmoothScrolling() {
+  const navLinks = document.querySelectorAll('a[href^="#"]');
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
 
-      if (targetSection) {
-        // Hide all sections
-        terminalSections.forEach((section) => {
-          section.classList.remove("active");
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - 70;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
         });
-
-        // Show target section
-        targetSection.classList.add("active");
-
-        // Add typing effect to new section
-        addTypingEffect(targetSection);
       }
     });
   });
 }
 
-// Typing Animations
-function initTypingAnimations() {
-  const typingElements = document.querySelectorAll(".typing-text");
-
-  typingElements.forEach((element) => {
-    const text = element.getAttribute("data-text");
-    element.textContent = "";
-    element.style.borderRight = "2px solid var(--accent-green)";
-
-    let i = 0;
-    const typeWriter = () => {
-      if (i < text.length) {
-        element.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
-      } else {
-        setTimeout(() => {
-          element.style.borderRight = "none";
-        }, 1000);
-      }
-    };
-
-    setTimeout(typeWriter, 1000);
-  });
-}
-
-// Skill Bars Animation
+// Barras de habilidades animadas
 function initSkillBars() {
   const skillBars = document.querySelectorAll(".skill-progress");
 
@@ -189,7 +211,7 @@ function initSkillBars() {
 
           setTimeout(() => {
             skillBar.style.width = width + "%";
-          }, 500);
+          }, 200);
 
           observer.unobserve(skillBar);
         }
@@ -203,7 +225,7 @@ function initSkillBars() {
   });
 }
 
-// Contact Form
+// Formulario de contacto
 function initContactForm() {
   const form = document.getElementById("contactForm");
 
@@ -219,15 +241,15 @@ function initContactForm() {
     };
 
     if (validateForm(data)) {
-      showTerminalNotification("Message sent successfully!", "success");
+      showNotification("Message sent successfully!", "success");
       form.reset();
     } else {
-      showTerminalNotification("Please fill in all fields correctly.", "error");
+      showNotification("Please fill in all fields correctly.", "error");
     }
   });
 }
 
-// Form Validation
+// Validación del formulario
 function validateForm(data) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -240,112 +262,124 @@ function validateForm(data) {
   );
 }
 
-// Terminal Notifications
-function showTerminalNotification(message, type = "info") {
-  const terminalOutput = document.querySelector(".terminal-output");
-
-  const notificationLine = document.createElement("div");
-  notificationLine.className = "terminal-line";
+// Mostrar notificaciones
+function showNotification(message, type = "info") {
+  const notification = document.createElement("div");
+  notification.className = `notification notification-${type}`;
 
   const colors = {
-    success: "#00ff00",
-    error: "#ff0044",
-    info: "#00aaff",
+    success: "#00ff88",
+    error: "#ff6b6b",
+    info: "#00d4ff",
   };
 
-  notificationLine.innerHTML = `
-    <span class="prompt">elias@hacker:~$</span>
-    <span class="command" style="color: ${colors[type]}">echo "${message}"</span>
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-glass);
+    border: 1px solid ${colors[type]};
+    border-radius: var(--border-radius);
+    padding: 12px 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+    max-width: 300px;
   `;
 
-  terminalOutput.appendChild(notificationLine);
-  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  notification.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span style="color: ${colors[type]};">●</span>
+      <span>${message}</span>
+    </div>
+  `;
 
-  // Remove after 5 seconds
+  document.body.appendChild(notification);
+
+  // Animar entrada
   setTimeout(() => {
-    if (terminalOutput.contains(notificationLine)) {
-      terminalOutput.removeChild(notificationLine);
+    notification.style.transform = "translateX(0)";
+  }, 100);
+
+  // Remover después de 4 segundos
+  setTimeout(() => {
+    notification.style.transform = "translateX(100%)";
+    setTimeout(() => {
+      if (document.body.contains(notification)) {
+        document.body.removeChild(notification);
+      }
+    }, 300);
+  }, 4000);
+}
+
+// Animaciones al hacer scroll
+function initAnimations() {
+  const animatedElements = document.querySelectorAll(
+    ".section, .hero-content, .project-card, .skill-category"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  animatedElements.forEach((el) => {
+    observer.observe(el);
+  });
+}
+
+// Efecto de partículas sutil
+function initParticleEffect() {
+  const particleContainer = document.querySelector(".bg-particles");
+  if (!particleContainer) return;
+
+  // Crear partículas flotantes sutiles
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement("div");
+    particle.style.cssText = `
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: float ${5 + Math.random() * 10}s ease-in-out infinite;
+      left: ${Math.random() * 100}%;
+      top: ${Math.random() * 100}%;
+    `;
+
+    particleContainer.appendChild(particle);
+  }
+
+  // Agregar animación CSS para las partículas
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+      50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
     }
-  }, 5000);
+  `;
+  document.head.appendChild(style);
 }
 
-// Cursor Effect
-function initCursorEffect() {
-  const cursor = document.getElementById("cursor");
+// Efecto de escritura en el terminal
+function initTypingEffect() {
+  const terminalContent = document.querySelector(".terminal-content");
+  if (!terminalContent) return;
 
-  document.addEventListener("mousemove", function (e) {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-  });
+  const codeLines = terminalContent.querySelectorAll(".code-line");
 
-  document.addEventListener("mousedown", function () {
-    cursor.style.transform = "scale(0.8)";
-  });
-
-  document.addEventListener("mouseup", function () {
-    cursor.style.transform = "scale(1)";
-  });
-}
-
-// Theme Toggle
-function initThemeToggle() {
-  const themeToggle = document.getElementById("themeToggle");
-
-  themeToggle.addEventListener("click", function () {
-    document.body.classList.toggle("light-theme");
-    const isLight = document.body.classList.contains("light-theme");
-
-    if (isLight) {
-      document.documentElement.style.setProperty("--text-primary", "#1a1a1a");
-      document.documentElement.style.setProperty("--text-secondary", "#333333");
-      document.documentElement.style.setProperty("--bg-primary", "#ffffff");
-      document.documentElement.style.setProperty("--bg-secondary", "#f8f8f8");
-      document.documentElement.style.setProperty("--accent-green", "#00aa00");
-    } else {
-      document.documentElement.style.setProperty("--text-primary", "#00ff00");
-      document.documentElement.style.setProperty("--text-secondary", "#00cc00");
-      document.documentElement.style.setProperty("--bg-primary", "#0a0a0a");
-      document.documentElement.style.setProperty("--bg-secondary", "#111111");
-      document.documentElement.style.setProperty("--accent-green", "#00ff00");
-    }
-  });
-}
-
-// Language Toggle
-function initLanguageToggle() {
-  const languageToggle = document.getElementById("languageToggle");
-  const langText = languageToggle.querySelector(".lang-text");
-
-  languageToggle.addEventListener("click", function () {
-    currentLanguage = currentLanguage === "en" ? "es" : "en";
-    langText.textContent = currentLanguage.toUpperCase();
-    translateText();
-  });
-
-  // Initialize with Spanish
-  translateText();
-}
-
-// Glitch Effects
-function initGlitchEffects() {
-  const glitchElements = document.querySelectorAll(".glitch-text");
-
-  glitchElements.forEach((element) => {
-    element.addEventListener("mouseenter", function () {
-      this.style.animation = "glitch 0.3s infinite";
-    });
-
-    element.addEventListener("mouseleave", function () {
-      this.style.animation = "glitch 2s infinite";
-    });
-  });
-}
-
-// Add Typing Effect to Section
-function addTypingEffect(section) {
-  const terminalLines = section.querySelectorAll(".terminal-line");
-
-  terminalLines.forEach((line, index) => {
+  codeLines.forEach((line, index) => {
     line.style.opacity = "0";
     line.style.transform = "translateX(-20px)";
 
@@ -353,57 +387,29 @@ function addTypingEffect(section) {
       line.style.transition = "all 0.5s ease";
       line.style.opacity = "1";
       line.style.transform = "translateX(0)";
-    }, index * 200);
+    }, index * 500);
   });
-}
 
-// Terminal Commands
-function executeCommand(command) {
-  const terminalOutput = document.querySelector(".terminal-output");
-
-  const commandLine = document.createElement("div");
-  commandLine.className = "terminal-line";
-  commandLine.innerHTML = `
-    <span class="prompt">elias@hacker:~$</span>
-    <span class="command">${command}</span>
-  `;
-
-  terminalOutput.appendChild(commandLine);
-  terminalOutput.scrollTop = terminalOutput.scrollHeight;
-}
-
-// Keyboard Shortcuts
-document.addEventListener("keydown", function (e) {
-  // Ctrl + T for theme toggle
-  if (e.ctrlKey && e.key === "t") {
-    e.preventDefault();
-    document.getElementById("themeToggle").click();
-  }
-
-  // Ctrl + L for language toggle
-  if (e.ctrlKey && e.key === "l") {
-    e.preventDefault();
-    document.getElementById("languageToggle").click();
-  }
-
-  // Escape to go back to welcome
-  if (e.key === "Escape") {
-    const terminalSections = document.querySelectorAll(".terminal-section");
-    terminalSections.forEach((section) => {
-      section.classList.remove("active");
+  // Animar las barras de habilidades después de que aparezcan
+  setTimeout(() => {
+    const skillBars = terminalContent.querySelectorAll(".skill-progress");
+    skillBars.forEach((bar, index) => {
+      const width = bar.getAttribute("data-width");
+      setTimeout(() => {
+        bar.style.width = width + "%";
+      }, index * 200);
     });
-    document.getElementById("welcome").classList.add("active");
-  }
-});
+  }, 2000);
+}
 
-// Project Hover Effects
+// Efectos de hover para proyectos
 function initProjectHoverEffects() {
   const projectCards = document.querySelectorAll(".project-card");
 
   projectCards.forEach((card) => {
     card.addEventListener("mouseenter", function () {
       this.style.transform = "translateY(-8px)";
-      this.style.boxShadow = "0 0 30px rgba(0, 255, 0, 0.5)";
+      this.style.boxShadow = "var(--shadow-glow)";
     });
 
     card.addEventListener("mouseleave", function () {
@@ -413,22 +419,52 @@ function initProjectHoverEffects() {
   });
 }
 
-// Initialize project hover effects
+// Cambiar navbar al hacer scroll
+function initScrollNavbar() {
+  const header = document.querySelector(".header");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.style.background = "rgba(10, 10, 10, 0.95)";
+      header.style.backdropFilter = "blur(20px)";
+    } else {
+      header.style.background = "var(--bg-glass)";
+      header.style.backdropFilter = "blur(20px)";
+    }
+  });
+}
+
+// Inicializar efectos adicionales
 document.addEventListener("DOMContentLoaded", function () {
   initProjectHoverEffects();
+  initScrollNavbar();
 });
 
-// Error Handling
+// Atajos de teclado
+document.addEventListener("keydown", function (e) {
+  // Ctrl + T para cambiar tema
+  if (e.ctrlKey && e.key === "t") {
+    e.preventDefault();
+    document.getElementById("themeToggle").click();
+  }
+
+  // Ctrl + L para cambiar idioma
+  if (e.ctrlKey && e.key === "l") {
+    e.preventDefault();
+    document.getElementById("languageToggle").click();
+  }
+});
+
+// Manejo de errores
 window.addEventListener("error", function (e) {
-  console.error("Error en el portfolio hacker:", e.error);
+  console.error("Error en el portfolio:", e.error);
 });
 
-// Export functions for external use
+// Exportar funciones para uso externo
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     translateText,
-    showTerminalNotification,
+    showNotification,
     validateForm,
-    executeCommand,
   };
 }
