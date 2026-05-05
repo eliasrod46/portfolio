@@ -478,11 +478,11 @@ body {
   box-shadow: var(--shadow-glow);
 }
 
-/* Code Terminal */
+/* Code Terminal (estilo terminal Linux / GTK, sin “traffic lights” macOS) */
 .code-terminal {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-sm);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(10px);
@@ -491,41 +491,108 @@ body {
 .terminal-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
+  gap: var(--spacing-sm);
+  padding: 0.4rem 0.5rem 0.4rem 0.65rem;
+  background: linear-gradient(180deg, #2d2d2d 0%, #252525 100%);
+  border-bottom: 1px solid #1a1a1a;
+  min-height: 36px;
 }
 
-.terminal-buttons {
+.light-theme .terminal-header {
+  background: linear-gradient(180deg, #ececec 0%, #e4e4e4 100%);
+  border-bottom-color: var(--border-color);
+}
+
+.terminal-header-start {
   display: flex;
-  gap: var(--spacing-xs);
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
 }
 
-.terminal-buttons .btn {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+.terminal-app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-secondary);
+  font-size: 0.85rem;
+  opacity: 0.95;
 }
 
-.terminal-buttons .btn.close {
-  background: #ff5f56;
+.terminal-session {
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--border-radius-sm);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
-.terminal-buttons .btn.minimize {
-  background: #ffbd2e;
-}
-.terminal-buttons .btn.maximize {
-  background: #27c93f;
+
+.light-theme .terminal-session {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .terminal-title {
-  font-family: "Fira Code", monospace;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  flex: 1;
+  min-width: 0;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  color: #c0c0c0;
   font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.light-theme .terminal-title {
+  color: var(--text-secondary);
+}
+
+.terminal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.terminal-csd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.35rem;
+  font-family: "Fira Code", monospace;
+  font-size: 0.65rem;
+  line-height: 1;
+  color: #9a9a9a;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  user-select: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.terminal-csd:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.light-theme .terminal-csd {
+  color: #666;
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .terminal-csd:hover {
+  background: rgba(0, 0, 0, 0.07);
+  color: var(--text-primary);
 }
 
 .terminal-content {
