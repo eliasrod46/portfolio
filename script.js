@@ -20,18 +20,19 @@ const translations = {
     "nav.contact": "Contact",
     "hero.badge": "Available for work",
     "hero.greeting": "Hello, I'm",
-    "hero.subtitle": "Backend Developer & Problem Solver",
+    "hero.subtitle":
+      "Backend Developer for teams that need reliable APIs and faster releases",
     "hero.description":
-      "I create <span class='highlight'>robust and scalable solutions</span> that drive business growth. Specialized in backend development with solid frontend experience, I transform complex ideas into <span class='highlight'>efficient applications</span>.",
+      "I design and build <span class='highlight'>APIs, integrations, and backend systems</span> for startups and digital businesses that need to ship features with confidence. My focus is clear architecture, maintainable code, and <span class='highlight'>faster delivery with fewer production issues</span>.",
     "hero.view_projects": "View Projects",
     "hero.contact_me": "Contact Me",
     "about.title": "About Me",
     "about.subtitle":
       "Get to know more about my journey and passion for development",
     "about.description1":
-      "I'm a passionate backend developer with a solid background in creating robust, scalable applications. My main focus is on building efficient systems that solve real-world problems.",
+      "I specialize in backend development for products that need stable growth: well-designed APIs, secure authentication, clean data models, and integrations that keep the business moving.",
     "about.description2":
-      "Although my specialty is backend development, I also have significant experience in frontend technologies, which allows me to understand the complete web development landscape and create more integrated solutions.",
+      "I also work comfortably on the frontend when needed, which helps me collaborate better with product and design teams and deliver complete features from idea to production.",
     "about.years_experience": "Years Experience",
     "about.projects_completed": "Projects Completed",
     "about.technologies": "Technologies",
@@ -43,13 +44,20 @@ const translations = {
     "projects.title": "Projects",
     "projects.subtitle": "Some of my recent work",
     "projects.ecommerce_desc":
-      "Complete RESTful API for e-commerce platform with JWT authentication, integrated payments and inventory management.",
+      "API-first backend for e-commerce: JWT auth, payment integration, and inventory workflows designed to reduce checkout friction and simplify operations.",
     "projects.analytics_desc":
-      "Real-time data analytics platform with interactive dashboard and automated reports.",
+      "Real-time analytics platform with automated reporting pipelines and a dashboard that gives teams faster visibility into business decisions.",
     "projects.social_desc":
-      "Backend for social network with real-time chat, push notifications and friend system.",
+      "Scalable social backend with real-time messaging, push notifications, and relationship features designed for active user communities.",
     "contact.title": "Contact",
     "contact.subtitle": "Have a project in mind? Let's talk!",
+    "contact.email_label": "Email",
+    "contact.phone_label": "Phone",
+    "contact.location_label": "Location",
+    "contact.placeholder_name": "Your name",
+    "contact.placeholder_email": "Your email",
+    "contact.placeholder_subject": "Subject",
+    "contact.placeholder_message": "Your message",
     "contact.send_message": "Send Message",
   },
   es: {
@@ -59,18 +67,19 @@ const translations = {
     "nav.contact": "Contacto",
     "hero.badge": "Disponible para trabajar",
     "hero.greeting": "Hola, soy",
-    "hero.subtitle": "Desarrollador Backend & Solucionador de Problemas",
+    "hero.subtitle":
+      "Desarrollador Backend para equipos que necesitan APIs confiables y lanzar más rápido",
     "hero.description":
-      "Creo <span class='highlight'>soluciones robustas y escalables</span> que impulsan el crecimiento empresarial. Especializado en desarrollo backend con experiencia sólida en frontend, transformo ideas complejas en <span class='highlight'>aplicaciones eficientes</span>.",
+      "Diseño y construyo <span class='highlight'>APIs, integraciones y sistemas backend</span> para startups y negocios digitales que necesitan publicar funcionalidades con confianza. Mi enfoque es arquitectura clara, código mantenible y <span class='highlight'>entregas más rápidas con menos errores en producción</span>.",
     "hero.view_projects": "Ver Proyectos",
     "hero.contact_me": "Contactarme",
     "about.title": "Sobre Mí",
     "about.subtitle":
       "Conoce más sobre mi trayectoria y pasión por el desarrollo",
     "about.description1":
-      "Soy un desarrollador backend apasionado con una sólida formación en crear aplicaciones robustas y escalables. Mi enfoque principal está en construir sistemas eficientes que resuelvan problemas reales.",
+      "Me especializo en backend para productos que necesitan crecer sin romperse: APIs bien diseñadas, autenticación segura, modelos de datos limpios e integraciones que acompañan el ritmo del negocio.",
     "about.description2":
-      "Aunque mi especialidad es el desarrollo backend, también tengo experiencia significativa en tecnologías frontend, lo que me permite entender el panorama completo del desarrollo web y crear soluciones más integradas.",
+      "También trabajo con frontend cuando el proyecto lo requiere; eso me permite colaborar mejor con producto y diseño y entregar funcionalidades completas, desde la idea hasta producción.",
     "about.years_experience": "Años de Experiencia",
     "about.projects_completed": "Proyectos Completados",
     "about.technologies": "Tecnologías",
@@ -82,13 +91,20 @@ const translations = {
     "projects.title": "Proyectos",
     "projects.subtitle": "Algunos de mis trabajos recientes",
     "projects.ecommerce_desc":
-      "API RESTful completa para plataforma de comercio electrónico con autenticación JWT, pagos integrados y gestión de inventario.",
+      "Backend API-first para e-commerce: autenticación JWT, integración de pagos y flujos de inventario pensados para reducir fricción de compra y simplificar la operación.",
     "projects.analytics_desc":
-      "Plataforma de análisis de datos en tiempo real con dashboard interactivo y reportes automatizados.",
+      "Plataforma de analítica en tiempo real con pipelines de reportes automáticos y dashboard para dar visibilidad más rápida en decisiones de negocio.",
     "projects.social_desc":
-      "Backend para red social con funcionalidades de chat en tiempo real, notificaciones push y sistema de amigos.",
+      "Backend escalable para red social con mensajería en tiempo real, notificaciones push y funcionalidades de relación entre usuarios para comunidades activas.",
     "contact.title": "Contacto",
     "contact.subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
+    "contact.email_label": "Correo",
+    "contact.phone_label": "Teléfono",
+    "contact.location_label": "Ubicación",
+    "contact.placeholder_name": "Tu nombre",
+    "contact.placeholder_email": "Tu correo",
+    "contact.placeholder_subject": "Asunto",
+    "contact.placeholder_message": "Tu mensaje",
     "contact.send_message": "Enviar Mensaje",
   },
 };
@@ -107,6 +123,16 @@ function translateText() {
       } else {
         element.textContent = translations[currentLanguage][key];
       }
+    }
+  });
+
+  const placeholderElements = document.querySelectorAll(
+    "[data-translate-placeholder]"
+  );
+  placeholderElements.forEach((element) => {
+    const key = element.getAttribute("data-translate-placeholder");
+    if (translations[currentLanguage][key]) {
+      element.setAttribute("placeholder", translations[currentLanguage][key]);
     }
   });
 }
