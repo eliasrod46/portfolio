@@ -43,8 +43,10 @@ const translations = {
     "skills.tools": "Tools",
     "projects.title": "Projects",
     "projects.subtitle": "Some of my recent work",
-    "projects.ecommerce_desc":
-      "API-first backend for e-commerce: JWT auth, payment integration, and inventory workflows designed to reduce checkout friction and simplify operations.",
+    "projects.gestor_title": "Gestor Económico",
+    "projects.gestor_status": "In development",
+    "projects.gestor_desc":
+      "Fullstack personal finance app. Spring Boot backend (JWT, ownership, rate limiting), REST API on MongoDB; React/Vite frontend. Live production deploy.",
     "projects.analytics_desc":
       "Real-time analytics platform with automated reporting pipelines and a dashboard that gives teams faster visibility into business decisions.",
     "projects.social_desc":
@@ -90,8 +92,10 @@ const translations = {
     "skills.tools": "Herramientas",
     "projects.title": "Proyectos",
     "projects.subtitle": "Algunos de mis trabajos recientes",
-    "projects.ecommerce_desc":
-      "Backend API-first para e-commerce: autenticación JWT, integración de pagos y flujos de inventario pensados para reducir fricción de compra y simplificar la operación.",
+    "projects.gestor_title": "Gestor Económico",
+    "projects.gestor_status": "En desarrollo",
+    "projects.gestor_desc":
+      "App fullstack de finanzas personales. Backend Spring Boot (JWT, ownership, rate limit), API REST sobre MongoDB; frontend React/Vite. Deploy en producción.",
     "projects.analytics_desc":
       "Plataforma de analítica en tiempo real con pipelines de reportes automáticos y dashboard para dar visibilidad más rápida en decisiones de negocio.",
     "projects.social_desc":
